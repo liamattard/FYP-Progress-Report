@@ -12,7 +12,9 @@ which has recieved a lot of observation and heuristic contribution
 have defined the TTDP as part of the Orienteering Problem(OP). OP
 problems contain a number of nodes each containing a score and try to
 solve the path containing the maximal score constrained with
-parameters such as time and budget \cite{Gunawan2016}. There are many
+parameters such as time and budget \cite{Gunawan2016}. Gunawan et al.
+\cite{Gunawan2016} state that OP is a combination of the Knapsack
+problem and the Travelling Salesman Problem (TSP). There are many
 solutions to this problem which will be discussed in the next section.
 % Maybe talk about OP..etc
 
@@ -60,21 +62,45 @@ solutions to this problem which will be discussed in the next section.
 
 
     Recently, a solution towards presenting an itinerary solving
-    conflicts between multiple tourists with different preferences was
-    proposed by  \cite{Sylejmani2017}. All tourists are split into
-    groups by preference, during certain activities the itinerary
-    splits up the groups to visit their specific POI. Before the trip
-    one of the options is selected: 
-    \begin{enumerate}
-        \item \textbf{Solo}: A trip for a single person.
-        \item \textbf{Subgroups}: The tourists are separated into
-        smaller groups by preference and travel together.
+    conflicts between multiple tourists with different preferences by
+    creating a group recommender system (GRS)
+    \cite{Castro2015,Delic2018} was proposed by  \cite{Sylejmani2017}.
+    All tourists are split into groups by preference, during certain
+    activities the itinerary splits up the groups to visit their
+    specific POI. Before the trip one of the options is selected: 
+
+    \begin{enumerate} 
+        \item \textbf{Solo}: A trip for a single person. 
+        \item \textbf{Subgroups}: The tourists are separated into smaller groups by preference and travel together.
         \item \textbf{All Together}: One itinerary for all Tourists.
         \item \textbf{Tourists Combined}: At certain times, tourists
     are separated to meet their personal preferences
-
     \end{enumerate}
 
+    An unique approach towards collecting the group's preferences for
+    a GRS is offered by Nguyen et al.\cite{Nguyen2018} An android
+    group chat application called STSGroup was created to target
+    conflicts between tourists. The idea is to collect the users’
+    preferences when they are communicating with each other rather
+    than individually. An example of a group of students travelling to
+    South Tylrol (Italy) was given in the paper in which each person
+    described its profile using certain tags such as the mood or parts
+    of groups they form of. Upon the text conversation users send a
+    selected POI in which other users can give it a thumbs up or down.
+    Ranking lists and logistics are calculated in the background based
+    on the group chat's data collection to determine the ideal
+    preferences for the group.
+
+    Iterated Local Search could be used to generate the travel
+    itineraries as seen vansteenwegen et al 2009
+    \cite{Vansteenwegen2009}. This approach is considered to be very
+    suitable for real-time TTDP applications \cite{Gavalas2015}. This
+    approach finds a solution using the the best generated outputs
+    from local search and repeats the procedure until a desired score
+    is reached. In 2011, CityPlanner3 \cite{Vansteenwegen2011a}
+    integrated ILS with Greedy Randomised adaptive search Procedure
+    (GRASP) \cite{Feo1995}. This system allowed to alter POI durations and choose a
+    starting and ending point.
 
 
 

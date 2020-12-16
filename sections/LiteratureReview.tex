@@ -102,17 +102,43 @@ solutions to this problem which will be discussed in the next section.
     and choose a starting and ending points
 
 \subsection{User Profiling for Travel Preferences}
+    Recent years have shown how the average internet user has gone
+    from a passive content absorber to also content producer through
+    the rise in social media \cite{Ikeda}. This section describes
+    methods of user profiling and information gathering.\\
 
-    Recent years have shown the average internet user has gone from a
-    passive content absorber to content producers through the rise in
-    social media \cite{Ikeda}. This section describes previous methods
-    of user profiling and information gathering.
-
-    Textual data from comments and posts can be used to gather such
-    user preferences. In 2013, A system was shown by Ikeda et al.
+    \subsubsection{User Profiling based on textual methods} Textual
+    data from comments and posts can be used to gather such user
+    preferences. In 2013, A system was shown by Ikeda et al.
     \cite{Ikeda} which could perform sentiment analysis based on
-    100,000 Japanese user profiles for demographic estimation.
-     
+    100,000 Japanese user profiles and perform demographic estimation.
+    Tags from social media posts can also be useful information to
+    gather information about the user. Hung et al. \cite{Hung2008}
+    demonstrated a technique in user profiling based on tags.  Given
+    an object and a user, the similarity between the tags is
+    calculated. Both of these maximum similarities are summed up by
+    the correlation between the set of object tags and the set of user
+    tags. \\
 
+    \subsubsection{User Profiling based on images} Terttunen
+    \cite{Terttunen2017} has shown how Instagram
+    \footnote{https://www.instagram.com/} has been of a major
+    influence towards tourists. The ability to share photos of the
+    amazing sights and landscapes has provided with more excitement
+    than looking for inspiration in a tourism brochure.
 
- 
+    Chen et al. \cite{Chen2013} produced a system for automatically
+    retrieving tags from images and incomplete tags called
+    \emph{FastTag}. The algorithm can be trained in \(O(n)\) time and
+    uses two simple linear mappings. Figure \ref{fasttag} shows an
+    example of an input image used alongside the incomplete input tags
+    \emph{snow, lake, feet}. Given these two inputs the algorithm was
+    able to produce the following tags, {mountain, snow, sky, lake, water,feet, legs,
+    boat, trees}.
+    \begin{figure}[H]
+        \caption{The image shows an example given in the FastTag
+        Paper.\cite{Chen2013}}
+        \centering
+        \includegraphics{fasttagSample}
+        \label{fasttag}
+    \end{figure}
